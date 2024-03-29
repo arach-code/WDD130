@@ -28,8 +28,8 @@
 
 body{
   font-family: var(--paragraph-font);
-  max-width: 960px;
   padding: 20px;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -53,15 +53,15 @@ nav{
   font-size: 1.2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 nav a {
-  padding: 20px;
+  padding: 0.5rem;
   color: var(--nav-link-color);
   display: block;
   text-decoration: none;
-  padding: 1rem;
+  font-weight: 700;
 }
   
 header nav{
@@ -87,9 +87,6 @@ main img{
 }
 
 
-aside{
-  position: relative;
-}
 
 aside img{
   width: 100%;
@@ -98,7 +95,9 @@ aside img{
 aside h2{
   position: absolute;
   top: 40px;
-  left: 150px;
+  left: 50%;
+  text-wrap: nowrap;
+  transform: translate(-50%, 0);
 }
 
 
@@ -107,11 +106,51 @@ aside h2{
 .box{
   margin: 1rem 0;
   border: 1px solid rgba(0,0,0,0.1);
-  padding: 2rem;
+  padding: 1rem;
   background-color: #ddd;
   color: #000;
 }
 
+
 .page-title{
   margin-top: 25px;
+}
+
+footer, .grid, header{
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+footer p{
+  text-align: center;
+}
+
+h1{
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid{
+  display: grid;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+ul{
+  list-style-position: inside;
+}
+
+main{
+  grid-column: 2/3;
+  margin: 1rem;
+}
+
+
+aside{
+  position: relative;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  width: 20rem;
+  min-height: 100%;
 }
