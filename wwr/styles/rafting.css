@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root{
+  --primary-color: #00669A;
+  --secondary-color: #19d4f8;
+  --accent1-color: #CCCC00;
+  --accent2-color: #ffffff;
+
+  --heading-font: 'Rubik', serif;
+  --paragraph-font: 'Nunito Sans', serif;
+
+  --nav-background-color: #00669A;
+  --nav-link-color: #ffffff;
+  --nav-hover-link-color: #19D4F8;
+  --nav-hover-background-color: #000000;
+}
+
+
+body{
+  font-family: var(--paragraph-font);
+  max-width: 960px;
+  padding: 10px;
+  margin: 0 auto;
+  border: solid 5px whitesmoke;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  text-align: center;
+}
+
+header{
+  padding: 20px;
+  background-color: var(--accent1-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+p{
+  padding: 25px 0;
+}
+
+
+nav{
+  padding: 20px;
+  font-size: 1.2rem;
+  display: flex;
+}
+
+nav a {
+  padding: 20px;
+  color: var(--nav-link-color);
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+.hero{
+  position: relative;
+}
+
+.hero h2, article{
+  position: absolute;
+  color: var(--accent1-color);
+}
+
+.hero > img{
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+  filter: brightness(30%);
+}
+
+.hero h2{
+  top: 20%;
+  color: var(--nav-hover-link-color);
+  padding: 0 5em;
+}
+
+article{
+  color: var(--accent2-color);
+  top: 0;
+  transform: translate(0, 50%);
+  padding: 0 7em;
+}
+
+article img{
+  float: right;
+  width: 300px;
+}
+
+section h2{
+  background-color: var(--accent1-color);
+  padding: 2rem;
+}
+
+footer {
+  background-color: var(--nav-background-color);
+  color: var(--accent2-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer p{
+  padding: 2rem;
+}
