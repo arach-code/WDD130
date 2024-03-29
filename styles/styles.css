@@ -1,26 +1,117 @@
-nav {
-    background-color: steelblue;
-    padding: 100px;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+  --primary-color: #00669A;
+  --secondary-color: #19d4f8;
+  --accent1-color: #CCCC00;
+  --accent2-color: #ffffff;
+
+  --heading-font: 'Rubik', serif;
+  --paragraph-font: 'Nunito Sans', serif;
+
+  --nav-background-color: #00669A;
+  --nav-link-color: #ffffff;
+  --nav-hover-link-color: #19D4F8;
+  --nav-hover-background-color: #000000;
+}
+
+
+body{
+  font-family: var(--paragraph-font);
+  max-width: 960px;
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+header{
+  padding: 20px;
+  background-color: var(--accent1-color);
+}
+
+p{
+  padding: 25px 0;
+}
+
+
+nav{
+  padding: 20px;
+  background-color: var(--nav-background-color);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav a {
-    color: white;
-    display: block;
-    padding: 20px;
+  padding: 20px;
+  color: var(--nav-link-color);
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+}
+  
+header nav{
+  background-color: inherit;
 }
 
-h1 {
-    color: steelblue;
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
 }
 
-img {
-    width: 150px;
-    height: auto;
-    border: 1px solid steelblue;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+aside{
+  width: 20em;
+  text-align: center;
 }
 
-p {
-    padding: 10px;
+
+main img{
+  /* other declarations */
+  margin-left: 40px;
+  float: right;
+}
+
+
+aside{
+  position: relative;
+}
+
+aside img{
+  width: 100%;
+}
+
+aside h2{
+  position: absolute;
+  top: 40px;
+  left: 150px;
+}
+
+
+
+/* Class Selectors */
+.box{
+  margin: 1rem 0;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 2rem;
+  background-color: #ddd;
+  color: #000;
+}
+
+.page-title{
+  margin-top: 25px;
 }
