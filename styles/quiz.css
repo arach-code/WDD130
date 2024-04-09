@@ -1,5 +1,14 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 
 :root{
   --primary-color: #00669A;
@@ -19,14 +28,18 @@
 
 body{
   font-family: var(--paragraph-font);
-  max-width: 960px;
   padding: 20px;
   margin: 0 auto;
+  display: grid;
+  place-items: center;
+  height: 100dvh;
 }
+
 
 h1, h2, h3, h4, h5, h6{
   font-family: var(--heading-font);
   color: var(--primary-color);
+  padding: 1rem 0;
 }
 
 header{
@@ -34,27 +47,48 @@ header{
   background-color: var(--accent1-color);
 }
 
-p{
-  padding: 25px;
+
+form{
+  max-width: 600px;
+  background-color: rgb(223, 222, 222);
+  padding: 2rem;
+  border-radius: 4px;
 }
 
-
-nav{
-  padding: 20px;
-  background-color: var(--nav-background-color);
-  font-size: 1.2rem;
-  display: flex;
-}
-
-nav a {
-  padding: 20px;
-  color: var(--nav-link-color);
+input, textarea, select{
   display: block;
-  text-decoration: none;
-  padding: 1rem;
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  outline: none;
+  border-radius: 3px;
 }
 
-nav a:hover {
-  color: var(--nav-hover-link-color);
-  background-color: var(--nav-hover-background-color);
+label{
+  padding: 20px 0;
+}
+
+input[type="submit"]{
+  background-color: var(--primary-color);
+  color:  var(--accent2-color);
+  border-radius: 10px;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+input[type="checkbox"]{
+  height: 20px;
+  width: 20px;
+}
+
+p{
+  background-color: #000000;
+  color: var(--accent1-color);
+  padding: 5px;
+  text-align: center;
 }
