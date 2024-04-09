@@ -180,7 +180,7 @@ form{
 }
 
 
-input, textarea, select{
+input, textarea, select, button{
   display: block;
   padding: 10px 25px;
   width:  300px;
@@ -195,11 +195,13 @@ label{
   padding: 20px 0;
 }
 
-input[type="submit"]{
+button{
   background-color: var(--primary-color);
   color:  var(--accent2-color);
   border-radius: 10px;
   font-size: 1rem;
+  margin: 20px auto;
+  padding: 15px 25px;
 }
 
 .title{
