@@ -66,6 +66,7 @@ nav a:hover {
 
 .hero{
   position: relative;
+  height: 500px;
 }
 
 .hero h2, article{
@@ -76,9 +77,10 @@ nav a:hover {
 .hero > img{
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   opacity: 0.8;
-  filter: brightness(30%);
+  filter: brightness(45%);
+  object-fit: cover;
 }
 
 .hero h2{
@@ -151,10 +153,9 @@ footer p{
 }
 
 form{
-  background-color: rgb(241, 238, 238);
   padding: 2rem 5rem;
   border-radius: 4px;
-  flex-grow: 1;
+  background-color: rgb(240, 244, 247);
 }
 
 
@@ -180,28 +181,16 @@ form{
 }
 
 
-input, textarea, select, button{
-  display: block;
-  padding: 10px 25px;
-  width:  300px;
-  margin-bottom: 10px;
-  margin-top: 5px;
-  outline: none;
-  border: none;
-  border-radius: 3px;
-}
-
 label{
-  padding: 20px 0;
+  padding: 5px 0;
+  width: 100%;
 }
 
 button{
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color:  var(--accent2-color);
-  border-radius: 10px;
   font-size: 1rem;
   margin: 20px auto;
-  padding: 15px 25px;
 }
 
 .title{
@@ -265,6 +254,161 @@ hr{
   margin: 50px 0;
 }
 
-main{
-  padding: 2rem;
+
+/* Trips page */
+.top-trips {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+.trip {
+  flex: 0 1 30%;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+.trip img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  background-color: rgb(240, 244, 247);
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: var(--nav-background-color);
+  color: var(--accent2-color);
+}
+
+
+/* home page */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgb(240, 244, 247);
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 20px;
+}
+
+.content h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
+.newsletter {
+  max-width: 100%;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  background-color: rgb(240, 244, 247);
+}
+
+.newsletter form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgb(240, 244, 247);
+  border: 1px solid #b7b7b7;
+}
+
+.newsletter form input,
+.newsletter form label{
+  width: 88%;
+}
+
+
+.my-quote{
+  padding: 2rem 0;
+}
+
+
+.my-quote img{
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+
+.call-to-action{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 400px;
+  max-width: 500px;
+  transform: translate(-50%, -50%);
+}
+
+.call-to-action > *{
+  background-color: inherit;
+  text-align: left;
+  color: var(--accent2-color);
+}
+
+.call-to-action > a{
+  background-color: var(--secondary-color);
+  display: inline-block;
+  padding: 10px 25px;
+  text-align: left;
+  color: var(--accent2-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.call-to-action > a:hover{
+  background-color: var(--accent1-color);
+}
+
+.call-to-action > h1 {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+button, 
+textarea,
+input[type="email"],
+input[type="password"],
+input[type="text"]{
+  width: 100%;
+  display: block;
+  padding: 16px 25px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+
+
+form > *{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
 }
